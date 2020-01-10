@@ -4,21 +4,52 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+        <title>HCDE 439 | Assignment 1</title>
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
-
+        <link rel="stylesheet" href="style.css">
     </head> 
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 1!</h1>
+            <h1>Assignment 1: Blink!</h1>
             <p>
-            <img src="red-panda.jpg" width=400></a>
+            <img src="A1_Blink/blink.gif" width=400></a>
             </p>
             <p>
-            Here is all the documentation for assignment 1!
+        For this assignment, I made four LEDs blink in a "rainbow" pattern (Red, Yellow, Green, Blue). This page hosts
+        the documentation, including the circuit schematic, an image of the circuit, my code for the assignment, and
+        an animated gif showing the operation of the circuit.
             </p>
+        </div>
+        <div class="row">
+            <div class="assignment left">
+                <br><br>
+                <img src="A1_Blink/circuit.jpg" width="250">
+                <p>
+        I used 220Ω resistors for each LED connected to my breadboard. I chose these resistors based off of the
+        following calculations: We're working with 5 volts, and the lowest voltage drop for these LEDs is 1.8, so
+        5 - 1.8 = V = 3.2. The standard LED current we're working with is 20 mA, or 0.02 amps. To find the resistance
+        I calculated V ÷ I, or 3.2 ÷ 0.02, which results in 160Ω. Therefore, R = 160Ω. I used 220Ω resistors for ease.
+                </p>
+            </div>
+            <div class="assignment middle">
+                <br><br>
+                <img src="A1_Blink/schematic.png" width="250">
+                <p>
+        This was my first time drawing schematics, so I'm unsure if I did it correctly. Nevertheless, I tried to show
+        all of the LEDs connected to their respective digital pins, modulated by their resistors, and all being
+        connected via breadboard to the single ground pin.
+                </p>
+            </div>
+            <div class="script">
+                <br><br>
+                <script src="https://gist.github.com/gina-gross/33d5c1bba1c23d37e5d84a9541527a3c.js"></script>
+                <p>
+        My Arduino code for the circuit.
+                </p>
+            </div>
+
         </div>
         
     </body>
