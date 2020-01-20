@@ -4,21 +4,55 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+        <title>HCDE 439 | Assignment 2</title>
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
-
+        <link rel="stylesheet" href="style.css">
     </head> 
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 2!</h1>
+            <h1>Assignment 2: Fade!</h1>
             <p>
-            <img src="red-panda.jpg" width=400></a>
+            <img src="A2_Fade/fade.gif" height=400></a>
             </p>
             <p>
-            Here is all the documentation for assignment 2!
+        For this assignment, I made an RGB LED cycle and fade through its different colors. I used a pushbutton with 
+        a pull-down resistor so I could track its state, and whenever you press the button, it turns on the LED with 
+        its fading pattern. When you let go of the button, the circuit turns off.
             </p>
+        </div>
+        <div class="row">
+            <div class="assignment left" style="width: 450px;">
+                <br><br>
+                <img src="A2_Fade/fade_circuit.png" width="450">
+                <p>
+        I connected the red, green and blue pins of the LED to analog pins 11, 10, and 9 respectively. I connected them to analog pins so that I could fade them using PWM.
+        I connected the LED's cathode (I believe that's right) to ground through a resistor; I chose 220Ω because it is a good and convenient resistance level that will work
+        for all colors of the LED.
+                </p><p>
+        The pushbutton is connected to digital pin 2 as input so I can read the button state. I followed guidance from
+        the example code StateChangeDetection as well as <a href="https://create.arduino.cc/projecthub/muhammad-aqib/arduino-button-tutorial-using-arduino-digitalread-function-08adb5">this Arduino button tutorial</a> 
+        by Muhammad Aqib and connected one leg of the pushbutton through a 10kΩ <b>pull-down resistor</b> to ground, and the other to the 5 volt supply. I would explain more in-depth my reasoning and choice behind
+        this resistor, however unlike the resistor for the LED I did not calculate for it or factor it in myself. Rather, the pull-down resistor is just a common implement to ensure state detection in a circuit; I 
+        used 10kΩ because it's what was used in both of the examples I mentioned, both of which covered what I wanted to do for my circuit. I don't know if 10kΩ is just the standard/a common resistance to use for
+        pull-downs in general, or if there is a reason in particular that it was used for these examples. Either way, I implemented it into my circuit and it worked great.
+                </p>
+            </div>
+            <div class="assignment middle" style="width: 300px">
+                <br><br>
+                <img src="A2_Fade/fade_schematic.jpeg" width="300">
+                <p>
+        Here is my second time with schematics. I think I did it right this time, fingers crossed!
+                </p>
+            </div>
+            <div class="script" style="width: 450px;">
+                <br><br>
+                <script src="https://gist.github.com/gina-gross/1114a02ccd2a4ba8848b2c50e5c1ef27.js"></script>
+                <p>
+        My Arduino code for the circuit.
+                </p>
+            </div>
         </div>
         
     </body>
