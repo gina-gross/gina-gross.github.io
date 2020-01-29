@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>HCDE 439 | Assignment 3</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 3: Input Output!</h1>
+            <p>
+            <img src="A3_InputOutput/inputoutput.gif" height=400></a>
+            </p>
+            <p>
+        For this assignment, I used a photoresistor to change the state of an LED using a voltage divider. When the photoresistor detects darkness the LED turns on, 
+        and when the photoresistor detects light the LED turns off.
+            </p>
+        </div>
+        <div class="row">
+            <div class="assignment left" style="width: 450px;">
+                <br><br>
+                <img src="A3_InputOutput/circuit.png" width="450">
+                <p>
+        I connected the LED to digital pin 13 through a 220Ω resistor, and its other leg to ground. I chose this resistance because it is pretty standard 
+        and I will probably always use it on LEDs.
+                </p><p>
+        Since the Arduino can’t directly interpret resistance (rather, it reads voltage), you need to use a voltage divider to be able to read the photoresistor. 
+        The voltage divider will output a high voltage when the photoresistor is getting a lot of light, and a low voltage when little or no light is present.
+        I used a 10kΩ resistor between analog pin 0 (which the photoresistor is connected to) and ground to divide the voltage.
+                </p>
+            </div>
+            <div class="assignment middle" style="width: 300px">
+                <br><br>
+                <img src="A3_InputOutput/schematic.jpeg" width="300">
+                <p>
+        Here is my schematic.
+                </p>
+            </div>
+            <div class="script" style="width: 450px;">
+                <br><br>
+                <script src="https://gist.github.com/gina-gross/9a497bea6b0a44ade15661e42ba0fa29.js"></script>
+                <p>
+        My Arduino code for the circuit.
+                </p>
+            </div>
+        </div>
+        
+    </body>
+</html>
