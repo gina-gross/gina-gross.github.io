@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>HCDE 439 | Assignment 5</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 5: Talking to the Web!</h1>
+            <p>
+            <img src="A5_TalkingToWeb/circuit.gif" width=400></a>
+            </p>
+            <p>
+        This assignment is identical to A6. My circuit has a joystick input which the Arduino will read X and Y values from. The joystick also has pushbutton functionality but I only wanted
+        to read the directional input. The Arduino sends the joystick X and Y values in an array to a webpage via p5.js. p5.js will then be able to visually depict the data with a graph in green and blue.
+        It's pretty cool. The second part of the circuit has the Arduino read input from the webpage, where a slider controls the brightness of an LED. 
+            </p>
+        </div>
+        <div class="row">
+            <div class="assignment left">
+                <br><br>
+                <img src="A5_TalkingToWeb/circuit1.jpeg" width="250">
+                <p>
+        The joystick is connected directly to the Arduino using jumper cables. The joystick's VRx and VRy write to pins A1 and A2. I have a blue LED connected to pin 5 through a standard 220Ω resistor.
+        Within the code, p5.js reads the joystick input and draws an updating graph. On the second half of the webpage there is a slider, and the Arduino reads this slider input from p5.js to control the
+        brightness of my blue LED.
+                </p>
+            </div>
+            <div class="assignment middle">
+                <br><br>
+                <img src="A5_TalkingToWeb/schematic.jpeg" width="250">
+                <p>
+        This schematic shows both A5 and A6. On the left, the joystick is connected to the Arduino with its GND and +5v pins going right to GND and 5v (duh), VRx connecting to the A1 pin, and VRy connecting to the A2 pin. 
+        The SW pin can be left alone because I don't need to use the joystick as a button. On the right, it's a pretty simple LED circuit as described above, connected to pin 5.
+                </p>
+            </div>
+            <div class="script" style="width: 320px">
+                <br><br>
+                <script src="https://gist.github.com/gina-gross/a505791a999114ed9c1e68bac86145c2.js"></script>
+                <p>
+        My Arduino code for the circuit.
+                </p>
+            </div>
+            <div class="script" style="width: 320px">
+                <br><br>
+                <script src="https://gist.github.com/gina-gross/9d24e9fcbfa7adab1758c625d13ae1ae.js"></script>
+                <p>
+        My p5.js code for the webpage.
+                </p>
+            </div>
+
+        </div>
+        
+    </body>
+</html>
